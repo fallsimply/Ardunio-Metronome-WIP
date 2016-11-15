@@ -3,6 +3,8 @@ void setup() {
   // initialize serial communication at 9600 bits per second:
   Serial.begin(9600);
   SFsetup();
+  int delay  delay;
+  
 }
 
 void loop() {
@@ -10,7 +12,7 @@ void loop() {
   SFloop();
   int bmp;
   int input;
-  input = analogRead(0);
+  input = analogRead(A0);
   bmp = BeatsPerMin(input);
   Serial.println(bmp);
   delay(1);        // delay in between reads for stability
